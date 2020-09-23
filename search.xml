@@ -64,7 +64,7 @@
       <link href="/2020/09/22/hexo-ge-ren-bo-ke-jian-dan-zhi-ling/"/>
       <url>/2020/09/22/hexo-ge-ren-bo-ke-jian-dan-zhi-ling/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="hexo个人博客简单指令"><a href="#hexo个人博客简单指令" class="headerlink" title="hexo个人博客简单指令"></a>hexo个人博客简单指令</h1><p>hexo s             //启动（在本地运行，Ctrl+C停止）<br>hexo n “blog name” //写文章（生成文章后，用编辑器写作）<br>hexo clean         //清理<br>hexo g             //生成文章<br>hexo s             //再启动一次<br>hexo d             //部署到远端</p><p>按顺序执行即可</p>]]></content>
       
       
       <categories>
