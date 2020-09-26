@@ -4,11 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo个人博客简单指令, ECNU DeepLearning PShawn 肃清">
+    <meta name="keywords" content="经典算法：动态规划初步了解, ECNU DeepLearning PShawn 肃清">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="hexo个人博客简单指令hexo s             //启动（在本地运行，Ctrl+C停止）hexo n “blog name” //写文章（生成文章后，用编辑器写作）hexo clean         //清理hexo g  ">
+    <meta name="description" content="经典算法：动态规划初步了解（Dynamic programming）通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法
+适用于有重叠子问题和最优子结构性质的问题
+通常许多子问题非常相似，为此动态规划法试图仅仅解决每个子问题一次，从而">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>hexo个人博客简单指令 | PShawn的博客</title>
+    <title>经典算法：动态规划初步了解 | PShawn的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -329,13 +331,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        hexo个人博客简单指令
+                        经典算法：动态规划初步了解
                     </div>
                 </div>
             </div>
@@ -446,8 +448,16 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/hexo/" target="_blank">
-                            <span class="chip bg-color">hexo</span>
+                        <a href="/tags/算法/" target="_blank">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                        <a href="/tags/动态规划/" target="_blank">
+                            <span class="chip bg-color">动态规划</span>
+                        </a>
+                        
+                        <a href="/tags/入门/" target="_blank">
+                            <span class="chip bg-color">入门</span>
                         </a>
                         
                     </div>
@@ -458,8 +468,12 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/hexo简单指令/" class="post-category" target="_blank">
-                            hexo简单指令
+                        <a href="/categories/算法/" class="post-category" target="_blank">
+                            算法
+                        </a>
+                        
+                        <a href="/categories/算法/动态规划/" class="post-category" target="_blank">
+                            动态规划
                         </a>
                         
                     </div>
@@ -470,7 +484,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-22
+                    2020-09-26
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -484,14 +498,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    70
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
                 
@@ -507,8 +521,75 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="hexo个人博客简单指令"><a href="#hexo个人博客简单指令" class="headerlink" title="hexo个人博客简单指令"></a>hexo个人博客简单指令</h1><p>hexo s             //启动（在本地运行，Ctrl+C停止）<br>hexo n “blog name” //写文章（生成文章后，用编辑器写作）<br>hexo clean         //清理<br>hexo g             //生成文章<br>hexo s             //再启动一次<br>hexo d             //部署到远端</p>
-<p>按顺序执行即可</p>
+                <h1 id="经典算法：动态规划初步了解（Dynamic-programming）"><a href="#经典算法：动态规划初步了解（Dynamic-programming）" class="headerlink" title="经典算法：动态规划初步了解（Dynamic programming）"></a>经典算法：动态规划初步了解（Dynamic programming）</h1><p><strong>通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法</strong></p>
+<p>适用于有<strong>重叠子问题</strong>和<strong>最优子结构</strong>性质的问题</p>
+<p>通常许多子问题非常相似，为此动态规划法试图仅仅解决每个子问题一次，从而减少计算量：一旦某个给定子问题的解已经算出，则将其记忆化存储，以便下次需要同一个子问题解之时直接查表。这种做法在重复子问题的数目关于输入的规模呈指数增长时特别有用。</p>
+<hr>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>动态规划在查找有很多重叠子问题的情况的最优解时有效。它将问题重新组合成子问题。为了避免多次解决这些子问题，它们的结果都逐渐被计算并被保存，从简单的问题直到整个问题都被解决。因此，动态规划保存递归时的结果，因而不会在解决同样的问题时花费时间。</p>
+<p>动态规划只能应用于有最优子结构的问题。最优子结构的意思是局部最优解能决定全局最优解（对有些问题这个要求并不能完全满足，故有时需要引入一定的近似）。简单地说，问题能够分解成子问题来解决。</p>
+<hr>
+<h2 id="适用情况"><a href="#适用情况" class="headerlink" title="适用情况"></a>适用情况</h2><ol>
+<li>最优子结构性质。如果问题的最优解所包含的子问题的解也是最优的，我们就称该问题具有最优子结构性质（即满足最优化原理）。最优子结构性质为动态规划算法解决问题提供了重要线索。</li>
+<li>无后效性。即子问题的解一旦确定，就不再改变，不受在这之后、包含它的更大的问题的求解决策影响。</li>
+<li>子问题重叠性质。子问题重叠性质是指在用递归算法自顶向下对问题进行求解时，每次产生的子问题并不总是新问题，有些子问题会被重复计算多次。动态规划算法正是利用了这种子问题的重叠性质，对每一个子问题只计算一次，然后将其计算结果保存在一个表格中，当再次需要计算已经计算过的子问题时，只是在表格中简单地查看一下结果，从而获得较高的效率，降低了时间复杂度。</li>
+</ol>
+<hr>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>经典：三角形最小路径和<br><img src="%E4%B8%89%E8%A7%92%E5%BD%A2%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E4%B9%8B%E5%92%8C%E9%A2%98%E7%9B%AE.png" alt><br>方法一：动态规划<br>思路与算法</p>
+<p>我们用 f[i][j] 表示从三角形顶部走到位置 (i, j)的最小路径和。这里的位置 (i, j)(i,j) 指的是三角形中第 i 行第 j 列（均从 00 开始编号）的位置。</p>
+<p>由于每一步只能移动到下一行「相邻的节点」上，因此要想走到位置 (i,j)，上一步就只能在位置 (i−1,j−1) 或者位置 (i - 1, j)。我们在这两个位置中选择一个路径和较小的来进行转移，状态转移方程为：</p>
+<p>f[i][j]=min(f[i−1][j−1],f[i−1][j])+c[i][j]</p>
+<p>其中 c[i][j] 表示位置 (i, j) 对应的元素值。</p>
+<p>注意第 i 行有 i+1 个元素，它们对应的 j 的范围为 [0, i][0,i]。当 j=0 或 j=i 时，上述状态转移方程中有一些项是没有意义的。例如当 j=0j=0 时，f[i-1][j-1] 没有意义，因此状态转移方程为：</p>
+<p>f[i][0] = f[i-1][0] + c[i][0]</p>
+<p>即当我们在第 i 行的最左侧时，我们只能从第 i-1 行的最左侧移动过来。当 j=i 时，f[i-1][j] 没有意义，因此状态转移方程为：</p>
+<p>f[i][i] = f[i-1][i-1] + c[i][i]</p>
+<p>即当我们在第 i 行的最右侧时，我们只能从第 i-1 行的最右侧移动过来。</p>
+<p>最终的答案即为 f[n-1][0]f[n−1][0] 到 f[n-1][n-1]f[n−1][n−1] 中的最小值，其中 n 是三角形的行数。</p>
+<p>细节</p>
+<p>状态转移方程的边界条件是什么？由于我们已经去除了所有「没有意义」的状态，因此边界条件可以定为：</p>
+<p>f[0][0] = c[0][0]</p>
+<p>即在三角形的顶部时，最小路径和就等于对应位置的元素值。这样一来，我们从 1 开始递增地枚举 i，并在 [0, i][0,i] 的范围内递增地枚举 j，就可以完成所有状态的计算。</p>
+<p>C++:</p>
+<pre><code>class Solution {
+public:
+    int minimumTotal(vector&lt;vector&lt;int&gt;&gt;&amp; triangle) {
+        int n = triangle.size();
+        vector&lt;vector&lt;int&gt;&gt; f(n, vector&lt;int&gt;(n));
+        f[0][0] = triangle[0][0];
+        for (int i = 1; i &lt; n; ++i) {
+            f[i][0] = f[i - 1][0] + triangle[i][0];
+            for (int j = 1; j &lt; i; ++j) {
+                f[i][j] = min(f[i - 1][j - 1], f[i - 1][j]) + triangle[i][j];
+            }
+            f[i][i] = f[i - 1][i - 1] + triangle[i][i];
+        }
+        return *min_element(f[n - 1].begin(), f[n - 1].end());
+    }
+};
+</code></pre><p>Java:</p>
+<pre><code>class Solution {
+    public int minimumTotal(List&lt;List&lt;Integer&gt;&gt; triangle) {
+        int n = triangle.size();
+        int[][] f = new int[n][n];
+        f[0][0] = triangle.get(0).get(0);
+        for (int i = 1; i &lt; n; ++i) {
+            f[i][0] = f[i - 1][0] + triangle.get(i).get(0);
+            for (int j = 1; j &lt; i; ++j) {
+                f[i][j] = Math.min(f[i - 1][j - 1], f[i - 1][j]) + triangle.get(i).get(j);
+            }
+            f[i][i] = f[i - 1][i - 1] + triangle.get(i).get(i);
+        }
+        int minTotal = f[n - 1][0];
+        for (int i = 1; i &lt; n; ++i) {
+            minTotal = Math.min(minTotal, f[n - 1][i]);
+        }
+        return minTotal;
+    }
+}</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>动态规划的解题一般思路:<br>首先<strong>递归</strong>应该是我们解决动态规划问题最常用的方法,<br>而<strong>递归</strong>到<strong>动规</strong>的一般转化方法为:<br>如果该递归函数有n个参数,那么就定义一个n维数组，数组下标是递归函数参数的取值范围（也就是数组每一维的大小）。数组元素的值就是递归函数的返回值（初始化为一个标志值,表明还未被填充），这样就可以从边界值开始逐步的填充数组，相当于计算递归函数的逆过程（这和前面所说的推导过程应该是相同的）。</p>
+<p>附：<a href="https://leetcode-cn.com/problems/triangle/" target="_blank" rel="noopener">leetcode题目地址（可看多种题解）</a></p>
+<hr>
+<p>参考链接：<br><a href="https://leetcode-cn.com/problems/triangle/solution/san-jiao-xing-zui-xiao-lu-jing-he-by-leetcode-solu/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/triangle/solution/san-jiao-xing-zui-xiao-lu-jing-he-by-leetcode-solu/</a><br><a href="https://blog.csdn.net/ailaojie/article/details/83014821">https://blog.csdn.net/ailaojie/article/details/83014821</a></p>
+<p>推荐：<br><a href="https://zhuanlan.zhihu.com/p/31628866" target="_blank" rel="noopener">程序员小灰关于动态规划的漫画</a><br><a href="https://blog.csdn.net/ailaojie/article/details/83014821">清晰讲解动态规划</a></p>
 
             </div>
             <hr />
@@ -667,9 +748,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《hexo个人博客简单指令》
+                    《经典算法：动态规划初步了解》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/09/22/hexo-ge-ren-bo-ke-jian-dan-zhi-ling/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/09/26/jing-dian-suan-fa-dong-tai-gui-hua-chu-bu-liao-jie/" property="cc:attributionName"
                rel="cc:attributionURL">
                 肃清
             </a> 采用
@@ -710,7 +791,7 @@
         repo: 'godweiyang.github.io',
         owner: 'pshawn',
         admin: "godweiyang",
-        id: '2020/09/22/hexo-ge-ren-bo-ke-jian-dan-zhi-ling/',
+        id: '2020/09/26/jing-dian-suan-fa-dong-tai-gui-hua-chu-bu-liao-jie/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -993,92 +1074,40 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/09/22/markdown-ji-ben-yu-fa/">
+                <a href="/2020/09/26/jing-dian-suan-fa-dong-tai-gui-hua-chu-bu-liao-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="Markdown基本语法">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="经典算法：动态规划初步了解">
                         
-                        <span class="card-title">Markdown基本语法</span>
+                        <span class="card-title">经典算法：动态规划初步了解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-22
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category" target="_blank">
-                                    Markdown
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Markdown/" target="_blank">
-                        <span class="chip bg-color">Markdown</span>
-                    </a>
-                    
-                    <a href="/tags/基础语法/" target="_blank">
-                        <span class="chip bg-color">基础语法</span>
-                    </a>
-                    
-                    <a href="/tags/博客基础/" target="_blank">
-                        <span class="chip bg-color">博客基础</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/09/22/hexo-ge-ren-bo-ke-jian-dan-zhi-ling/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="hexo个人博客简单指令">
-                        
-                        <span class="card-title">hexo个人博客简单指令</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            怕自己忘记，简单整理了一下hexo需要用到的几条指令
+                            自己想系统地刷题，于是整理了一下关于动态规划的知识，初步入门，后面刷题题解应该也会贴出来，同时以后理解加深后会进一步更新
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-22
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo简单指令/" class="post-category" target="_blank">
-                                    hexo简单指令
+                            <a href="/categories/算法/" class="post-category" target="_blank">
+                                    算法
+                                </a>
+                            
+                            <a href="/categories/算法/动态规划/" class="post-category" target="_blank">
+                                    动态规划
                                 </a>
                             
                             
@@ -1089,8 +1118,69 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/" target="_blank">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/算法/" target="_blank">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/动态规划/" target="_blank">
+                        <span class="chip bg-color">动态规划</span>
+                    </a>
+                    
+                    <a href="/tags/入门/" target="_blank">
+                        <span class="chip bg-color">入门</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/09/23/wei-xin-xiao-cheng-xu-zhu-liu-kuang-jia-hui-zong/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="微信小程序主流框架汇总（2020）">
+                        
+                        <span class="card-title">微信小程序主流框架汇总（2020）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            本文介绍了现在比较主流的几种微信小程序框架：uni-app、wepy、mpvue、taro
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/微信小程序/" class="post-category" target="_blank">
+                                    微信小程序
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/微信小程序/" target="_blank">
+                        <span class="chip bg-color">微信小程序</span>
+                    </a>
+                    
+                    <a href="/tags/主流框架/" target="_blank">
+                        <span class="chip bg-color">主流框架</span>
                     </a>
                     
                 </div>
