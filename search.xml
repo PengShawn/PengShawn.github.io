@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>前端项目初始化步骤</title>
+      <link href="/2020/09/27/qian-duan-xiang-mu-chu-shi-hua-bu-zou/"/>
+      <url>/2020/09/27/qian-duan-xiang-mu-chu-shi-hua-bu-zou/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前端项目初始化步骤"><a href="#前端项目初始化步骤" class="headerlink" title="前端项目初始化步骤"></a>前端项目初始化步骤</h1><p>建议提前安装配置好node.js、git，同时建议安装最新稳定版本<br>我是使用WebStorm，同时大多数命令也是在WebStorm里的terminal中运行</p><h2 id="一-安装Vue脚手架"><a href="#一-安装Vue脚手架" class="headerlink" title="一.安装Vue脚手架"></a>一.安装Vue脚手架</h2><p>安装：<code>npm install -g @vue/cli</code><br>查看版本：<code>vue -V</code></p><h2 id="二-通过Vue脚手架创建项目"><a href="#二-通过Vue脚手架创建项目" class="headerlink" title="二.通过Vue脚手架创建项目"></a>二.通过Vue脚手架创建项目</h2><ol><li><p>在自己指定文件夹下创建项目: <code>vue create vue-project</code><br><img src="vuecreate.png" alt></p></li><li><p>有自己规范的可以选择自己的，这里我们选择最后一项：Manually select feature，手动配置<br>按键盘上下键可以选择,Enter下一步</p></li></ol><p><img src="manually.png" alt></p><ol start="3"><li>按键盘上下键可以选择,空格键是选中与取消，A键是全选，Enter下一步</li></ol><ul><li>TypeScript    支持使用 TypeScript 书写源码</li><li>Progressive Web App（PWA）    Support PWA支持</li><li>Router    支持 vue-router</li><li>Vuex      支持 vuex </li><li>CSS Pre-processors    支持 CSS 预处理器</li><li>Linter / Formatter    支持代码风格检查和格式化</li><li>Unit Testing          支持单元测试。</li><li>E2E Testing           支持 E2E 测试</li></ul><p><img src="allselect.png" alt="总选择"></p><ol start="4"><li><p>回车，询问我是否用router的历史模式，我选的no</p></li><li><p>配置文件存放地方<br>第一个是独立文件夹位置，第二个是在package.json文件里</p></li></ol><p>我选择放单独配置文件，选第一个</p><ol start="6"><li>回车，询问我是否保存这次选的配置，我选的no（就是第2步自己的规范，我就不再多余保存配置了）</li></ol><hr><h2 id="三-配置Vue路由"><a href="#三-配置Vue路由" class="headerlink" title="三.配置Vue路由"></a>三.配置Vue路由</h2><p>注：在上一步配置中选择了Router的这里就不需要配置了</p><p>安装：<code>npm install vue-router</code><br><a href="https://router.vuejs.org/zh/installation.html" target="_blank" rel="noopener">vue-router官方文档</a><br><a href="https://www.cnblogs.com/jonathan102/p/9905175.html" target="_blank" rel="noopener">router基本配置和使用</a></p><h2 id="四-配置Element-UI组件库"><a href="#四-配置Element-UI组件库" class="headerlink" title="四.配置Element-UI组件库"></a>四.配置Element-UI组件库</h2><p>安装：<code>vue add element</code><br>然后：<img src="vue-element.png" alt><br>我选择Import on demand，因为如果全部导入会使项目结构比较臃肿<br><img src="element-la.png" alt></p><h2 id="五-配置axios库"><a href="#五-配置axios库" class="headerlink" title="五.配置axios库"></a>五.配置axios库</h2><p>安装： npm install axios</p><h2 id="六-初始化git远程仓库"><a href="#六-初始化git远程仓库" class="headerlink" title="六.初始化git远程仓库"></a>六.初始化git远程仓库</h2><p>需要先去gitHub和gitee申请账号<br>创建仓库：<br><img src="git%E4%BB%93%E5%BA%93.png" alt="gitee创建仓库"></p><p>git全局配置：</p><pre><code>git config --global user.name &quot;肃清&quot;git config --global user.email &quot;3187879878@qq.com&quot;</code></pre><h2 id="七-将本地项目托管到GitHub或码云中"><a href="#七-将本地项目托管到GitHub或码云中" class="headerlink" title="七.将本地项目托管到GitHub或码云中"></a>七.将本地项目托管到GitHub或码云中</h2><p>在项目目录下：</p><pre><code>git statusgit add .git commit -m &quot;add files&quot;git status</code></pre><p>最后会显示：working tree clean</p><pre><code>cd existing_git_repogit remote add origin https://gitee.com/pshawn/vue-project.gitgit push -u origin master</code></pre><p>刷新查看gitee刚刚创建的仓库，我们本地的仓库已经成功地上传到了远程仓库</p><h2 id="八、项目初始化"><a href="#八、项目初始化" class="headerlink" title="八、项目初始化"></a>八、项目初始化</h2><p>打开WebStorm终端，按顺序执行：</p><ol><li><p><code>git status</code><br>查看当前工作区是否干净</p></li><li><p><code>git checkout -b login</code><br>创建分支（比如这里创建login分支）</p></li><li><p><code>git branch</code><br>查看当前项目所有分支</p></li><li><p><code>npm run serve</code><br>编译和热更新，查看项目</p></li><li><p>删除自带的不必要的组件，如Home.vue, About.vue</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端项目 </category>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+            <tag> 前端项目 </tag>
+            
+            <tag> element-ui </tag>
+            
+            <tag> echarts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>经典算法：动态规划初步了解</title>
       <link href="/2020/09/26/jing-dian-suan-fa-dong-tai-gui-hua-chu-bu-liao-jie/"/>
       <url>/2020/09/26/jing-dian-suan-fa-dong-tai-gui-hua-chu-bu-liao-jie/</url>
